@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<img src="/static/images/geminis-logo.svg" style="height: 150px">
+<div class="login-box">
+    <form action="/login{{ next }}" method="post">
+        {% if invalid %}
+            <em class="fas fa-exclamation" style="color:orangered; margin-right: 20px;"></em> Incorrect user or password
+        {% endif %}
+            <div class="login-input-box">
+                <em class="fas fa-envelope" style="color:white; margin-right: 20px;"></em>
+                <input title="Email" type="email" id="email" name="email" autofocus>
+            </div>
+            <div class="login-input-box">
+                <em class="fas fa-lock" style="color:white; margin-right: 20px"></em>
+                <input title="Password" type="password" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-default btn-login"><em class="fas fa-share-square" style="color:white"></em></button>
+        </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="login-box">
+    <img src="/static/images/geminis-logo.svg" style="height: 150px">
+    <div style="margin-top: 30px; margin-bottom: 30px">
+        <h2>Auth Token Generate</h2>
+        <form action="/token" method="post">
+
+            <div class="login-input-box">
+                <em class="fas fa-user" style="color:white; margin-right: 20px;"></em>
+                <input title="User" type="text" id="user" name="user" placeholder="User" autofocus>
+            </div>
+
+            <div class="login-input-box">
+                <em class="fas fa-key" style="color:white; margin-right: 20px;"></em>
+                <input title="Email" type="text" id="token" name="token" placeholder="Token">
+            </div>
+
+            <button type="submit" class="btn btn-default btn-login"><em class="fas fa-save"
+                                                                       style="color:white"></em></button>
+        </form>
+    </div>
+
+    <div>
+        <h2>Cache Purge</h2>
+        <form action="/purge" method="post">
+            <button type="submit" class="btn btn-default btn-login"><em class="fas fa-crosshairs"
+                                                                       style="color:white"></em></button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

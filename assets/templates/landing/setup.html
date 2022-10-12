@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/setup" method="post">
+    <div class="login-input-box">
+        <em class="fas fa-envelope" style="color:white; margin-right: 20px;"></em>
+        <input title="Email" type="email" id="email" name="email" autofocus>
+    </div>
+    <div class="login-input-box">
+        <em class="fas fa-address-card" style="color:white; margin-right: 20px;"></em>
+        <input title="Name" id="name" name="name">
+    </div>
+    <div class="login-input-box">
+        <em class="fas fa-lock" style="color:white; margin-right: 20px"></em>
+        <input title="Password" type="password" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-default btn-login"><em class="fas fa-share-square" style="color:white"></em></button>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,92 @@
+@font-face {
+    font-family: SourceSansPro;
+    src: url(../fonts/SourceSansPro-Light.otf);
+}
+
+body {
+    font-family: SourceSansPro, sans-serif !important;
+    color: white !important;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    background: rgb(218,0,112);
+    background: linear-gradient(0deg, rgba(218,0,112,1) 0%, rgba(166,0,85,1) 25%, rgba(129,0,66,1) 50%, rgba(83,0,42,1) 75%, rgba(33,0,17,1) 100%);
+}
+
+a {
+    color: white !important;
+}
+
+.underline {
+    border-bottom: 1px solid currentColor;
+}
+
+.content {
+    flex: 1;
+}
+
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fixed-footer {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box input {
+    border-width: 0 0 1px;
+    border-color: white;
+    border-radius: 0;
+}
+
+.login-box input, .login-box input:focus {
+    color: white;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.login-box input::placeholder {
+    color: white;
+}
+
+.login-input-box {
+    padding: 15px;
+}
+
+.btn-login {
+    margin-top: 20px;
+
+    width: 150px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 16px !important;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    border-color: #53002A;
+    background-color: #53002A;
+}
+
+.center-container, footer {
+    z-index: 10;
+}
